@@ -1,8 +1,12 @@
 import React from "react";
+import Layout from "../components/common/Layout.jsx";
 
 const Home = () => {
-  console.log("Home component rendered hlo");
-  return <div style={{ color: "white", fontSize: "24px" }}>Home</div>;
+  return (
+    <>
+      <Layout />
+    </>
+  );
 };
 
 export default Home;

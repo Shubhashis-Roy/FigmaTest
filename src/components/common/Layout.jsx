@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Layout.css";
 import Header from "./Header.jsx";
+// import PageHeader from "../PageHeader.jsx";
 import PageHeader from "../PageHeader.jsx";
 
 const Layout = ({ children }) => {
