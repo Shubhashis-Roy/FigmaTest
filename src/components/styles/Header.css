@@ -1,0 +1,167 @@
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* 🔧 MODIFIED: prevent wrapping */
+  gap: 0.5rem; /* 🔧 MODIFIED: for tighter spacing on small screens */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0; /* 🔧 ADDED: helps logo shrink if needed */
+  flex-shrink: 1; /* 🔧 ADDED */
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+  color: #00a8e8;
+  flex-shrink: 0; /* 🔧 ADDED */
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  overflow: hidden; /* 🔧 ADDED */
+}
+
+.logo-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #00a8e8;
+  padding-right: 54px;
+  white-space: nowrap; /* 🔧 ADDED */
+  text-overflow: ellipsis; /* 🔧 ADDED */
+  overflow: hidden; /* 🔧 ADDED */
+}
+
+.logo-subtext {
+  font-size: 0.7rem;
+  color: #333;
+  white-space: nowrap; /* 🔧 ADDED */
+  text-overflow: ellipsis; /* 🔧 ADDED */
+  overflow: hidden; /* 🔧 ADDED */
+}
+
+/* Desktop nav */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0; /* 🔧 ADDED */
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00a8e8;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-initial {
+  background-color: #00a8e8;
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem 0.7rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+
+.username {
+  font-weight: 500;
+  color: #333;
+}
+
+.dropdown-icon {
+  font-size: 0.6rem;
+  color: #00a8e8;
+}
+
+/* Mobile nav */
+.mobile-nav {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown {
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 0.6rem;
+  color: #00a8e8;
+}
+
+.search-icon {
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.login-link {
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* 🔧 MODIFIED */
+  }
+
+  .logo-title {
+    font-size: 1rem; /* 🔧 REDUCED */
+  }
+
+  .logo-subtext {
+    font-size: 0.6rem; /* 🔧 REDUCED */
+  }
+
+  .desktop-nav a {
+    font-size: 0.85rem; /* 🔧 SLIGHT REDUCTION IF NEEDED */
+  }
+
+  .user-initial {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .logo-icon {
+    font-size: 1.2rem; /* 🔧 REDUCED */
+  }
+}

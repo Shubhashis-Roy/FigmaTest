@@ -1,0 +1,79 @@
+/* src/components/Layout.css */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0078d4;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #0078d4;
+  font-weight: 500;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.user-initial {
+  background-color: #0078d4;
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem 0.7rem;
+  border-radius: 50%;
+}
+
+.dropdown-icon {
+  font-size: 0.7rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}

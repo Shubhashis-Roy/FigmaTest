@@ -1,0 +1,90 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000;
+  text-align: center;
+}
+
+.back-button {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    display: none;
+  }
+
+  .page-title {
+    font-size: 1.3rem;
+  }
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.45rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.btn.active {
+  background-color: #00a8e8;
+  color: white;
+}
+
+.btn:not(.active) {
+  background-color: #000;
+  color: white;
+}
+
+.mobile-description {
+  display: none;
+  color: #666;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .mobile-description {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
