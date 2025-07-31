@@ -4,7 +4,9 @@ import Layout from "../components/common/Layout.jsx";
 const Home = () => {
   return (
     <>
-      <Layout />
+      <Layout>
+        <h3>Welcome to the Home Page</h3>
+      </Layout>
     </>
   );
 };
