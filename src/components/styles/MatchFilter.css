@@ -1,0 +1,207 @@
+.match-filter-top {
+  background: linear-gradient(to right, #c0eaff, #e6f7ff);
+  padding-top: 16px;
+}
+
+.match-filter {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* Top Filter Bar */
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.filter-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-right {
+  display: flex;
+  align-items: center;
+}
+
+select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.match-count {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Recommendation Section */
+.recommend-box {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 12px;
+  background: rgb(53, 189, 230);
+}
+
+.recommend-box span {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #0077cc;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Black button */
+.black-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Orange button wrapper (mobile-style emphasis) */
+.orange-btn-wrapper {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Orange button */
+.orange-btn {
+  background-color: #ff5a1f;
+  color: #fff;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+}
+
+/* Responsive for screens ≤ 480px */
+@media (max-width: 480px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-left,
+  .filter-right {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .recommend-box span {
+    font-size: 13px;
+  }
+
+  .black-btn {
+    width: 100%;
+  }
+
+  .orange-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+.recommend-row {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  gap: 50px;
+  /* flex-wrap: wrap; */
+  /* text-align: center; */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.recommend-text {
+  font-size: 14px;
+}
+
+.web-only {
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .web-only {
+    display: none;
+  }
+}
+
+/* ✅ Hide .filter-right (sort dropdown) on mobile */
+@media (max-width: 480px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  /* ✅ Reorder .match-count to appear on top of filters */
+  .filter-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .match-count {
+    order: -1; /* Move it to the top */
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+}
+
+.filter-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ✅ Mobile styles for ≤ 480px */
+@media (max-width: 480px) {
+  .filter-left {
+    flex-direction: column; /* default: column for smaller screens */
+    align-items: stretch;
+  }
+
+  /* ✅ Allow dropdowns to wrap in a row inside a container */
+  .filter-left select {
+    width: 100%;
+  }
+
+  /* ✅ Force dropdowns into horizontal row and reduce their width */
+  @media (max-width: 480px) and (min-width: 320px) {
+    .filter-left {
+      flex-direction: row; /* horizontal layout */
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .filter-left select {
+      flex: 1 1 30%;
+      font-size: 13px;
+      padding: 6px 8px;
+    }
+
+    .match-count {
+      flex-basis: 100%;
+      text-align: left;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  }
+}

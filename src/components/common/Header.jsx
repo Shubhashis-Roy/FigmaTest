@@ -1,6 +1,7 @@
 import React from "react";
 import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
 import "../styles/Header.css";
+import { FaChevronDown } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -17,6 +18,7 @@ const Header = () => {
         <div className="dropdown">
           Our Services <span className="dropdown-arrow">▼</span>
         </div>
+
         <FaSearch className="search-icon" />
         <a href="#login" className="login-link">
           Login
@@ -28,7 +30,9 @@ const Header = () => {
         <div className="user-menu">
           <span className="user-initial">C</span>
           <span className="username">Chander</span>
-          <span className="dropdown-icon">▼</span>
+          <span className="dropdown-icon" style={{ fontSize: "20px" }}>
+            ▼
+          </span>
         </div>
       </nav>
     </header>

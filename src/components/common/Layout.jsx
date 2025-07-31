@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/Layout.css";
 import Header from "./Header.jsx";
-// import PageHeader from "../PageHeader.jsx";
 import PageHeader from "../PageHeader.jsx";
+import MatchFilter from "../MatchFilter.jsx";
 
 const Layout = ({ children }) => {
   return (
@@ -10,6 +10,7 @@ const Layout = ({ children }) => {
       {/* Header */}
       <Header />
       <PageHeader />
+      <MatchFilter />
       {/* Main Content */}
       <main className="main-content">{children}</main>
     </div>
